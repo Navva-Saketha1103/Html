@@ -1,0 +1,140 @@
+body{
+    margin: 0;
+    height: 100vh;
+}
+@font-face {
+    font-family: "sansation";
+    src: url("./sansation/Sansation-Bold.ttf");
+}
+@font-face {
+    font-family: "rubic";
+    src: url("./rubik/Rubik-Light.ttf");
+}
+.flex-container{
+    display: flex;
+    flex-direction: flex;
+    height: 100%;
+} 
+#flex-item1{
+    display: flex;
+    width:50%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    box-sizing: border-box;
+}
+.form{
+    text-align: left;
+    padding: 140px;
+    width: 60%;
+}
+.heading{
+    color:#595da3;
+    font-family: rubic;
+    font-weight: 100;
+    font-size: 40px;
+}
+input{
+    outline: none;
+    border: none;
+    width:100%; 
+}  
+#user-icon{
+    color: #b7b9dc;
+}
+.inputs{
+    display: flex;
+    flex-direction: row;
+    column-gap: 4px;
+    border-bottom: 2px solid grey;
+    margin-bottom: 20px;
+    padding: 20px;
+    padding-left: 0px;
+}
+a{
+    text-decoration: none;
+    font-size: 20px;
+}
+.fs{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px 10px 0px;
+    width:100%;
+}
+.Sn{
+    height: 40px;
+    width: 200px;
+    padding: 8px;
+    text-align: center;
+    background-color: #73dac2;
+    color: white;
+    border-radius: 12px;
+    box-sizing: border-box;
+    box-shadow: 3px 3px 8px 0 #73dac2;
+}
+.fp{
+    padding: 10px;
+    padding-left: 0px;
+    color: #9a9cc8;
+}
+#flex-item2{
+    width:50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image : linear-gradient(45deg, #565aa1, #9a5fc3);
+}
+.s1{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 6;
+    /* justify-content: center; */
+    align-items: center;
+    /* padding-top:10%; */
+    box-sizing: border-box;
+}
+
+.h2{
+    color: white;
+    padding: 20% 0 8% 0;
+    font-family: 'Rubik', sans-serif;
+    font-family: 'Text Me One', sans-serif;
+    box-sizing: border-box;
+    font-weight: 1000;
+}
+#icon{
+    color: white;
+}
+.p1{
+    color: #d2cde5;
+    width: 34%;
+    text-align: center;
+}
+.box{
+    color: white;
+    padding-bottom: 2%;
+    font-family: sansation;
+    font-size: 42px;
+}
+.s2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 4;
+    font-size: 14px;
+    padding: 5%;
+}
+.d1{
+    border-right: 2px solid #7c78b5;
+    color:#8b8bbf;
+    padding-right: 20px;
+}
+b{
+    color:#a1a1cc;
+}
+.d2{
+    padding-left: 20px;
+    color: #8b8bbf;
+}
