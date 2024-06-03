@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            display: grid;
+            place-items: center;
+            height: 100%;
+            width: 100%;
+            background-color: silver;
+        }
+        
+        .p1 {
+            display: inline-flex;
+            width: 100%;
+            justify-content: center;
+        }
+        
+        [tooltip] {
+            position: relative;
+            margin: 0 5%;
+            padding: 6px;
+            font-size: 24px;
+            text-align: center;
+            background-color: lightgray;
+            border-radius: 25%;
+        }
+        
+        [tooltip]::after {
+            position: absolute;
+            visibility: hidden;
+            content: attr(tooltip);
+            background-color: grey;
+            padding: 5px;
+            width: 300px;
+            height: max-content;
+            border-radius: 5px;
+            top: -12px;
+            left: 50%;
+            transform: translate(-50%, -100%);
+        }
+        
+        [tooltip]::before {
+            position: absolute;
+            visibility: hidden;
+            content: "";
+            background-color: grey;
+            width: 10px;
+            height: 10px;
+            top: -10px;
+            left: 50%;
+            transform: translate(-50%, -100%) rotate(45deg);
+        }
+        
+        [tooltip]:hover::after {
+            visibility: visible;
+        }
+        
+        [tooltip]:hover::before {
+            visibility: visible;
+        }
+        
+        [tooltip-position="left"]:hover::after {
+            position: absolute;
+            top: 50%;
+            transform: translate(-100%, -50%);
+            left: -12px;
+        }
+        
+        [tooltip-position="left"]:hover::before {
+            position: absolute;
+            content: "";
+            top: 50%;
+            left: -10px;
+            transform: translate(-100%, -50%) rotate(45deg);
+        }
+        
+        [tooltip-position="top"]:hover::after {
+            position: absolute;
+            left: 50%;
+            top: -12px;
+            transform: translate(-50%, -100%);
+        }
+        
+        [tooltip-position="top"]:hover::before {
+            position: absolute;
+            content: "";
+            left: 50%;
+            top: -10px;
+            transform: translate(-50%, -100%) rotate(45deg);
+        }
+        
+        [tooltip-position="bottom"]:hover::after {
+            position: absolute;
+            top: 12px;
+            transform: translate(-50%, 100%);
+        }
+        
+        [tooltip-position="bottom"]:hover::before {
+            position: absolute;
+            content: "";
+            left: 50%;
+            top: calc(100% + 8px);
+            transform: translatex(-50%) rotate(45deg);
+        }
+        
+        [tooltip-position="right"]:hover::after {
+            position: absolute;
+            top: 50%;
+            left: calc(100% + 12px);
+            transform: translateY(-50%);
+        }
+        
+        [tooltip-position="right"]:hover::before {
+            position: absolute;
+            content: "";
+            top: 50%;
+            left: calc(100% + 10px);
+            transform: translateY(-50%) rotate(45deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="p1">
+        <div tooltip-position="left" tooltip="tooltip text left lorum tooltip text left lorum">Left</div>
+        <div tooltip-position="top" tooltip="tooltip text tooltip text left tooltip text left lorum v v tooltip text tooltip text tooltip text left tooltip text left lorum v v tooltip tooltip text tooltip text left tooltip text left lorum v v tooltip text lefttext left lorum lorum">Top</div>
+        <div tooltip-position="bottom" tooltip="tooltip text">Bottom</div>
+        <div tooltip-position="right" tooltip="tooltip text">Right</div>
+    </div>
+</body>
+
+</html>
